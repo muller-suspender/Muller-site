@@ -1,76 +1,142 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>✨ENTER WITH CORRECT PASS✨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝐒𝐔𝐒𝚸𝚵𝚴𝐃𝚵𝚪 𝚯𝐅𝐅𝚰𝐂𝚰𝚫𝐋 𝚸𝚫𝐆𝚵 📃</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url('https://files.catbox.moe/xbv7z9.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: limegreen;
+      background-color: black;
+      color: white;
       text-align: center;
-    }header {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  font-size: 2em;
-  font-weight: bold;
-  color: #00ffff;
-}
+    }
 
-.section {
-  margin: 40px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  width: 80%;
-  border-radius: 15px;
-}
+    .login-container {
+      padding: 40px;
+      margin: 100px auto;
+      width: 80%;
+      max-width: 400px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 3px solid pink;
+      border-radius: 15px;
+      box-shadow: 0 0 20px pink;
+    }
 
-.section h2, .section h3 {
-  color: #ffcc00;
-}
+    .login-container h1 {
+      color: pink;
+      margin-bottom: 20px;
+      animation: blink 1s infinite;
+      font-size: 24px;
+    }
 
-.button {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 15px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-}
+    .login-container input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      text-align: center;
+    }
 
-.button:hover {
-  background-color: #218838;
-}
+    .login-container button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background: lime;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-audio {
-  margin-top: 20px;
-}
+    .login-container button:hover {
+      background: green;
+      color: white;
+    }
 
+    .message {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .error {
+      color: red;
+      animation: blink 0.5s step-end infinite alternate;
+    }
+
+    .success {
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .upload-preview {
+      margin-top: 20px;
+    }
+
+    .upload-preview img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
   </style>
 </head>
-<body>  <header>
-    𝐒𝐔𝐒𝚸𝚵𝚴𝐃𝚵𝚪 𝚯𝐅𝐅𝚰𝐂𝚰𝚫𝐋 𝚸𝚫𝐆𝚵 📃
-  </header>  <div class="section">
-    <h2>🔧 OWNER: 𝚳𝐔𝐋𝐋𝚵𝚪 𝐃𝚵𝛁</h2>
-    <p>📞 254705101667</p>
-  </div>  <div class="section">
-    <a href="YOUR-BOT-FILE-UPLOAD-LINK" class="button">🤖 Upload Bot Files</a>
-    <a href="YOUR-HTML-CLASS-UPLOAD-LINK" class="button">📚 Upload Daily HTML Classes</a>
-    <a href="https://whatsapp.com/channel/0029VbA6BUbCHDymv2WCqu2g" class="button">📢 WhatsApp Channel</a>
-    <a href="https://wa.me/254705101667" class="button">👤 Contact Owner</a>
-  </div>  <div class="section">
-    <h3>🎵 Listen While Browsing</h3>
-    <audio controls>
-      <source src="YOUR-MP3-LINK" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div></body>
+<body>
+  <div class="login-container">
+    <h1>✨ENTER WITH CORRECT PASS✨</h1>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkLogin()">LOGIN</button>
+    <div class="message" id="message"></div>
+
+    <div class="upload-preview">
+      <input type="file" accept="image/*" onchange="previewImage(event)">
+      <br>
+      <img id="preview" src="" alt="Preview Image" style="display:none;">
+    </div>
+  </div>
+
+  <script>
+    function checkLogin() {
+      const user = document.getElementById("username").value.trim().toLowerCase();
+      const pass = document.getElementById("password").value.trim().toLowerCase();
+      const message = document.getElementById("message");
+
+      if (user === "muller" && pass === "mullerdev") {
+        message.innerHTML = '<div class="success">Welcome buddy here is Muller dev sight don\'t worry you\'ll be redirected</div>';
+        setTimeout(() => {
+          window.location.href = "suspender-main.html"; // Replace with your real file if needed
+        }, 5000);
+      } else {
+        message.innerHTML = '<div class="error">Suspender Muller denied you from entering in because you have entered incorrect details</div>';
+      }
+    }
+
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const output = document.getElementById('preview');
+        output.src = reader.result;
+        output.style.display = 'block';
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</body>
 </html>
