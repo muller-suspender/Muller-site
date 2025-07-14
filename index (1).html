@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>𝐒𝐔𝐒𝚸𝚵𝚴𝐃𝚵𝚪 𝚯𝐅𝐅𝚰𝐂𝚰𝚫𝐋 𝚸𝚫𝐆𝚵 📃</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: green;
+      text-align: center;
+      background: url('https://files.catbox.moe/xbv7z9.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: scrollWords 15s linear infinite;
+      font-size: 24px;
+      color: #fff;
+      background: #111;
+      padding: 10px;
+      border: 2px solid lime;
+      margin-bottom: 30px;
+    }
+
+    @keyframes scrollWords {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #222;
+      color: lime;
+      border: 2px solid lime;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    #commentBox {
+      margin-top: 25px;
+      border: 2px dashed red;
+      padding: 15px;
+      background-color: #111;
+      color: #0f0;
+    }
+
+    #owner {
+      animation: blink 1s infinite;
+      color: deeppink;
+      margin-top: 20px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Wallpaper Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://pin.it/2oZfrGzhG" type="video/mp4">
+  </video>
+
+  <div class="marquee">𝐒𝐔𝐒𝚸𝚵𝚴𝐃𝚵𝚪 𝚯𝐅𝐅𝚰𝐂𝚰𝚫𝐋 𝚸𝚫𝐆𝚵 📃</div>
+
+  <button onclick="alert('Upload feature for bot files is under development')">Bot Files</button>
+  <button onclick="alert('Check below for your daily HTML class')">HTML Classes</button>
+  <button onclick="window.location.href='https://whatsapp.com/channel/0029VbAWe2uIHphDEiz3Vh2r'">Our Channel</button>
+  <button onclick="toggleOwnerOptions()">OWNER🫶</button>
+
+  <div id="ownerOptions" class="hidden">
+    <button onclick="window.location.href='https://wa.me/254705101667?text=Hello%20Muller%2C%20I%20am%20interested%20in%20your%20classes%2C%20can%20you%20guide%20me%3F'">About Classes</button>
+    <button onclick="window.location.href='https://wa.me/254705101667?text=Hi%20Muller%20Dev%2C%20I'm%20interested%20in%20your%20bot%20files.%20Can%20you%20share%20with%20me%3F'">Bot Int</button>
+  </div>
+
+  <div id="commentBox">
+    <h3>HTML CLASSES (Daily)</h3>
+    <p>Welcome! This is where you’ll find your daily HTML lessons from Muller Dev. Stay tuned for updates. (Read-only)</p>
+    <ul>
+      <li>Day 1: Introduction to HTML</li>
+      <li>Day 2: Tags and Elements</li>
+      <!-- Add more lessons here -->
+    </ul>
+  </div>
+
+  <div id="owner">Itz 𝚳𝐔𝐋𝐋𝚵𝚪 𝐃𝚵𝛁</div>
+
+  <!-- Audio Player -->
+  <audio controls loop>
+    <source src="https://files.catbox.moe/i9xwbl.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function toggleOwnerOptions() {
+      const div = document.getElementById("ownerOptions");
+      div.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
